@@ -18,7 +18,7 @@ purrr::walk(pkgs, library, character.only = TRUE)
 rm(pkgs, i)
 
 # set API key
-# edit_r_environ()
+usethis::edit_r_environ()
 
 
 # Load and prepare sample data ==== 
