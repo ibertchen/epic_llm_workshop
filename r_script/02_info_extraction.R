@@ -1,10 +1,10 @@
 here::i_am("r_script/02_info_extraction.R")
 
-require(dplyr)
-require(stringr)
-require(openxlsx)
-require(ellmer)
-require(here)
+library(dplyr)
+library(stringr)
+library(openxlsx)
+library(ellmer)
+library(here)
 
 # load raw data
 df <- read.xlsx(here("data/info_extract_sample.xlsx"))

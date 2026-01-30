@@ -1,13 +1,23 @@
+pkgs <- c(
+  "dplyr", 
+  "stringr", 
+  "ellmer",
+  "openxlsx",
+  "here",
+  "usethis", 
+  "purrr"
+)
+
+for (i in pkgs) {
+  install.packages(i, type = "binary")
+}
+
 here::i_am("r_script/01_classification.R")
 
-require("dplyr")
-require("stringr")
-require("ellmer")
-require("openxlsx")
-require("here")
+purrr::walk(pkgs, library, character.only = TRUE)
+rm(pkgs, i)
 
 # set API key
-# require(usethis)
 # edit_r_environ()
 
 
