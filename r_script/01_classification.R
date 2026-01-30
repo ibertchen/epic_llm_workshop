@@ -21,6 +21,12 @@ rm(pkgs, i)
 usethis::edit_r_environ()
 
 
+# play with LLM 
+chat <- chat_openai(model = "gpt-4o-mini")
+
+chat$chat("What is the best thing to do in Lansing? (in 200 words)")
+
+
 # Load and prepare sample data ==== 
 df <- read.xlsx(here("data/tch_classification_1.xlsx"))
 
